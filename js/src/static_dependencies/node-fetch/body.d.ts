@@ -19,7 +19,7 @@ export default class Body {
      *
      * @return  Promise
      */
-    arrayBuffer(): Promise<any>;
+    arrayBuffer(): Promise<ArrayBuffer>;
     /**
      * Return raw response as Blob
      *
@@ -38,7 +38,7 @@ export default class Body {
      * @return  Promise
      */
     text(): Promise<string>;
-    buffer: () => Promise<any>;
+    buffer: () => Promise<Buffer<ArrayBuffer>>;
     [INTERNALS]: {
         body: any;
         stream: any;
@@ -53,5 +53,7 @@ export function getTotalBytes(request: any): number | null;
 export function writeToStream(dest: Stream.Writable, { body }: {
     body: any;
 }): Promise<void>;
+import { Buffer } from 'node:buffer';
 declare const INTERNALS: unique symbol;
+import Stream from 'node:stream';
 export {};
