@@ -150,8 +150,8 @@ export default class paradex extends Exchange {
         version: number;
     }>;
     retrieveAccount(): Promise<Dict | {
-        privateKey: any;
-        publicKey: any;
+        privateKey: string;
+        publicKey: string;
         address: string;
     }>;
     onboarding(params?: {}): Promise<any>;

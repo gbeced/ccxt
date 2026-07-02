@@ -150,13 +150,13 @@ export default class dydx extends Exchange {
     fetchPositions(symbols?: Strings, params?: {}): Promise<Position[]>;
     hashMessage(message: any): any;
     signHash(hash: any, privateKey: any): {
-        r: any;
-        s: any;
+        r: string;
+        s: string;
         v: any;
     };
     signMessage(message: any, privateKey: any): {
-        r: any;
-        s: any;
+        r: string;
+        s: string;
         v: any;
     };
     signOnboardingAction(): object;
